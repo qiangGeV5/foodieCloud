@@ -13,6 +13,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/common/foodie-cloud-common1/pom.xml" />
+        <option value="$PROJECT_DIR$/domain/item/foodie-item-mapper/pom.xml" />
       </set>
     </option>
   </component>

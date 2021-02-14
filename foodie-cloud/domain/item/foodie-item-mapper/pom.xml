@@ -6,18 +6,25 @@
         <artifactId>foodie-cloud</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
-<!--        <relativePath>../../pom.xml</relativePath>-->
+<!--        <relativePath>../../../pom.xml</relativePath>-->
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>foodie-cloud-shared-pojo</artifactId>
+    <artifactId>foodie-item-mapper</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>RELEASE</version>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>foodie-cloud-common</artifactId>
+            <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>foodie-item-pojo</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>

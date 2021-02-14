@@ -1,6 +1,6 @@
 package com.zq.config;
 
-import com.zq.interceptor.UserTokenInterceptor;
+//import com.zq.interceptor.UserTokenInterceptor;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,40 +25,40 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return builder.build();
     }
 
-    @Bean
-    public UserTokenInterceptor userTokenInterceptor(){
-
-        return new  UserTokenInterceptor();
-    }
+//    @Bean
+//    public UserTokenInterceptor userTokenInterceptor(){
+//
+//        return new  UserTokenInterceptor();
+//    }
 
     /**
      * 注册拦截器
      * @param registry
      */
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-
-        registry.addInterceptor(userTokenInterceptor())
-                .addPathPatterns("/Hello")
-                .addPathPatterns("/hello")
-                .addPathPatterns("/shopcart/add")
-                .addPathPatterns("/shopcart/del")
-                .addPathPatterns("/address/list")
-                .addPathPatterns("/address/add")
-                .addPathPatterns("/address/update")
-                .addPathPatterns("/address/setDefalut")
-                .addPathPatterns("/address/delete")
-                .addPathPatterns("/orders/*")
-                .addPathPatterns("/center/*")
-                .addPathPatterns("/userInfo/*")
-                .addPathPatterns("/myorders/*")
-                .addPathPatterns("/mycomments/*")
-                .excludePathPatterns("/myorders/deliver")
-                .excludePathPatterns("/orders/notifyMerchantOrderPaid");
-//        .addPathPatterns("/*/*")
-//        .excludePathPatterns("/myorders/deliver");//设置不需要拦截的
-        WebMvcConfigurer.super.addInterceptors(registry);
-    }
-
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//
+//        registry.addInterceptor(userTokenInterceptor())
+//                .addPathPatterns("/Hello")
+//                .addPathPatterns("/hello")
+//                .addPathPatterns("/shopcart/add")
+//                .addPathPatterns("/shopcart/del")
+//                .addPathPatterns("/address/list")
+//                .addPathPatterns("/address/add")
+//                .addPathPatterns("/address/update")
+//                .addPathPatterns("/address/setDefalut")
+//                .addPathPatterns("/address/delete")
+//                .addPathPatterns("/orders/*")
+//                .addPathPatterns("/center/*")
+//                .addPathPatterns("/userInfo/*")
+//                .addPathPatterns("/myorders/*")
+//                .addPathPatterns("/mycomments/*")
+//                .excludePathPatterns("/myorders/deliver")
+//                .excludePathPatterns("/orders/notifyMerchantOrderPaid");
+////        .addPathPatterns("/*/*")
+////        .excludePathPatterns("/myorders/deliver");//设置不需要拦截的
+//        WebMvcConfigurer.super.addInterceptors(registry);
+//    }
+//
 
 }
